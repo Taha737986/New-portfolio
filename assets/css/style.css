@@ -458,7 +458,7 @@ h3.my-profession
 .about .about-content .skills
 {
   flex: 0 0 40%;
-  max-width: 40%;
+  max-width: 100%;
   margin-top: 40px;
 }
 .about .about-content .skills .skill-item
@@ -466,15 +466,21 @@ h3.my-profession
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 25px;
+  position: relative;
+  padding-right: 55px;
 }
 .about .about-content .skills .skill-item h5
 {
-  line-height: 40px;
+  line-height: 24px;
   font-weight: 600;
   font-size: 16px;
   color: var(--text-black-900);
   text-transform: capitalize;
   font-family: 'Mooli', sans-serif;
+  min-height: 40px;
+  padding-right: 5px;
+  margin: 0;
+
 }
 .about .about-content .skills .skill-item .progress
 {
@@ -500,8 +506,11 @@ h3.my-profession
   color: var(--text-black-900);
   font-weight: 400;
   line-height: 40px;
-  margin-top: -50px;
+  margin-top: 0;
   font-family: "ABeeZee";
+  top: 0;
+  line-height: 24px;
+  white-space: nowrap;
 }
 .about .about-content .education, 
 .about .about-content .experience 
@@ -789,6 +798,7 @@ h3.my-profession
   padding: 0 50px;
 }
 
+/* Mobile */
 @media screen and (max-width: 1199px)
 {
   .section .container
@@ -867,4 +877,29 @@ h3.my-profession
     align-items: center;
     font-size: 12px;
   }
+}
+@media (max-width: 767px) {
+
+    .about .about-content .skills .skill-item {
+        padding-right: 48px;
+        margin-bottom: 25px;
+    }
+
+    .about .about-content .skills .skill-item h5 {
+        font-size: 15px;
+        line-height: 22px;
+        min-height: 44px;
+        overflow-wrap: break-word;
+    }
+
+    .about .about-content .skills .skill-item .skill-percent {
+        font-size: 14px;
+        top: 0;
+        right: 0;
+    }
+
+    .about .about-content .skills .skill-item .progress {
+        margin-top: 5px;
+        width: 100%;
+    }
 }
